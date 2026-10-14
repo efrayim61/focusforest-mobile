@@ -539,6 +539,24 @@ html, body { background:#a78f9a; }
 #btnStart.center-start:not(.resume-start){top:44%!important;font-size:calc(90 * var(--k))!important;}
 @media(max-width:760px){#btnStart.center-start:not(.resume-start){top:44%!important;font-size:calc(80 * var(--k))!important;}}
 
+
+/* iPhone 14 Pro: 393 x 852 CSS px, safe-area-aware overlays. */
+@media (max-width: 430px) {
+ html,body {max-width:100%;overflow-x:clip;}
+ #modal.modal {position:fixed!important;inset:0!important;width:100vw!important;height:100dvh!important;max-height:100dvh!important;padding:calc(env(safe-area-inset-top, 0px) + 12px) 12px calc(env(safe-area-inset-bottom, 0px) + 12px)!important;overflow-x:hidden!important;overflow-y:auto!important;display:flex!important;align-items:safe center!important;justify-content:center!important;box-sizing:border-box!important;}
+ #modal #sheet.sheet {flex:0 1 auto!important;width:100%!important;max-width:369px!important;min-width:0!important;max-height:calc(100dvh - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px) - 24px)!important;margin:auto!important;padding:20px 16px!important;overflow-y:auto!important;overflow-x:hidden!important;box-sizing:border-box!important;}
+ #modal #sheet * {max-width:100%!important;box-sizing:border-box!important;overflow-wrap:anywhere!important;}
+ #modal #sheet .row {width:100%!important;min-width:0!important;gap:8px!important;}
+ #modal #sheet .row > div {min-width:0!important;flex:1 1 auto!important;}
+ #modal #sheet .row > button, #modal #sheet .row > .sw-t {flex:0 0 50px!important;min-width:50px!important;width:50px!important;}
+ #modal #sheet .acts {display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:10px!important;}
+ #modal #sheet .acts button {width:100%!important;min-width:0!important;max-width:100%!important;font-size:clamp(19px,5vw,22px)!important;line-height:1.25!important;}
+ #modal #sheet h3 {font-size:clamp(28px,8vw,34px)!important;}
+ #toast.toast {position:fixed!important;left:12px!important;right:12px!important;bottom:calc(env(safe-area-inset-bottom, 0px) + 14px)!important;transform:translateY(20px)!important;width:auto!important;max-width:calc(100vw - 24px)!important;text-align:center!important;white-space:normal!important;}
+ #toast.toast.on {transform:translateY(0)!important;}
+ #btnStart.center-start:not(.resume-start) {top:42%!important;font-size:calc(76 * var(--k))!important;}
+}
+
 </style>
 <link rel="manifest" href="./manifest.webmanifest">
 <meta name="theme-color" content="#d9e5d5">
